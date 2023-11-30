@@ -1,12 +1,13 @@
 import React from "react";
+import '../styles/Header.css'
 
 function Header() {
   return (
     <header id="header">
       <div className="container">
 
-        <h1><a href="index.html">Emily Jones</a></h1>
-        <h2>I'm a passionate <span>graphic designer</span> from New York</h2>
+        <h1><a href="index.html">Cherise Foster</a></h1>
+        <h2>I'm a passionate <span>software engineer</span> from Denver, Colorado</h2>
 
         <nav id="navbar" className="navbar">
           <ul>
