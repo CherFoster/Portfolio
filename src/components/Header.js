@@ -6,7 +6,7 @@ function Header() {
     <header id="header">
       <div className="container">
 
-        <h1><a href="index.html">Cherise Foster</a></h1>
+        <h1>Cherise Foster</h1>
         <h2>I'm a passionate <span>software engineer</span> from Denver, Colorado</h2>
 
         <nav id="navbar" className="navbar">
