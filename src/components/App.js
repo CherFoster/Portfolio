@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './Header.js'
+import Home from './Home';
 
 
 function App(){
@@ -9,7 +9,9 @@ function App(){
     return (
         <>
           <Router>
-            <Header />
+            <Routes>
+            <Route path="/" element={<Home />} />
+            </Routes>
           </Router>
         
         </>

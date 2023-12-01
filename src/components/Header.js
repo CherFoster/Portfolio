@@ -22,13 +22,11 @@ function Header() {
           <i className="bi bi-list mobile-nav-toggle"></i>
         </nav>
 
-        <p className="my-3">Check out my linked in and blog:</p>
+        <p className="my-3">Check out my LinkedIn profile and blog:</p>
   
         <div className="social-links">
           <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
           <a href="#" className="blog"><i className="bi bi-journal-text"></i></a>
-          {/* <a href="#" className="facebook"><i className="bi bi-facebook"></i></a>
-          <a href="#" className="instagram"><i className="bi bi-instagram"></i></a> */}
         </div>
 
       </div>
