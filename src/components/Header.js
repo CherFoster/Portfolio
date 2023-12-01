@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/Header.css'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Header() {
   return (
@@ -21,11 +22,13 @@ function Header() {
           <i className="bi bi-list mobile-nav-toggle"></i>
         </nav>
 
+        <p className="my-3">Check out my linked in and blog:</p>
+  
         <div className="social-links">
-          <a href="#" className="twitter"><i className="bi bi-twitter"></i></a>
-          <a href="#" className="facebook"><i className="bi bi-facebook"></i></a>
-          <a href="#" className="instagram"><i className="bi bi-instagram"></i></a>
           <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
+          <a href="#" className="blog"><i className="bi bi-journal-text"></i></a>
+          {/* <a href="#" className="facebook"><i className="bi bi-facebook"></i></a>
+          <a href="#" className="instagram"><i className="bi bi-instagram"></i></a> */}
         </div>
 
       </div>
