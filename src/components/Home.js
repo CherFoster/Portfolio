@@ -6,16 +6,16 @@ function Home() {
   return (
     <>
         <Container>
-            <Row className="align-items-center"> {/* This line aligns items vertically */}
+            <Row className="align-items-center">
                 <Col sm={7}>
                 <Header />
                 </Col>
                 <Col sm={5}>
                 <Image 
-                    src="https://i.postimg.cc/cLVX62ZP/NEW.jpg"
+                    src="https://i.postimg.cc/k4SgTMtk/NEW.jpg"
                     fluid
                     roundedCircle
-                    style={{ width: '400px', height: 'auto' }}
+                    style={{ width: '450px', height: 'auto' }}
                 />
                 </Col>
             </Row>
