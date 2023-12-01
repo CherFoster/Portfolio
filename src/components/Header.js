@@ -12,7 +12,7 @@ function Header() {
 
         <nav id="navbar" className="navbar">
           <ul>
-            <li><a className="nav-link active" href="#header">Home</a></li>
+            <li><a className="nav-link active" href="#home">Home</a></li>
             <li><a className="nav-link" href="#about">About</a></li>
             <li><a className="nav-link" href="#resume">Resume</a></li>
             <li><a className="nav-link" href="#services">Services</a></li>
@@ -22,11 +22,13 @@ function Header() {
           <i className="bi bi-list mobile-nav-toggle"></i>
         </nav>
 
-        <p className="my-3">Check out my LinkedIn profile and blog:</p>
+        <p className="my-3">Check out my LinkedIn profile, GitHub, and blog:</p>
   
         <div className="social-links">
           <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
+          <a href="#" className="github"><i class="bi bi-github"></i></a>
           <a href="#" className="blog"><i className="bi bi-journal-text"></i></a>
+          
         </div>
 
       </div>
