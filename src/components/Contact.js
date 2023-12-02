@@ -33,9 +33,9 @@ function Contact(){
 
   return (
     <section id="contact" className="contact">
-      <div className="container">
+      <div className="contact-container">
         <div className="section-title">
-          <h2>Contact Me</h2>
+          <h2 className='contact-heading'>Contact Me</h2>
         </div>
         <div className="php-email-form mt-4">
           <form onSubmit={handleSubmit}>

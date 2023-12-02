@@ -2,7 +2,7 @@
 # Contact
 --------------------------------------------------------------*/
 
-h2 {
+.contact-heading {
     color: white;
     text-align: center;
 }
@@ -10,7 +10,7 @@ h2 {
     color: white;
 }
 
-.container {
+.contact-container {
     margin-top: 200px;
     width: 50%;
     margin-left: auto;
