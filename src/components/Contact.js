@@ -1,68 +1,82 @@
-import React from 'react';
-import { Formik, Field, ErrorMessage } from 'formik';
-import * as yup from 'yup';
-// import '../styles/Contact.css';
-import { Form, Button, FormGroup, FormControl, FormLabel } from 'react-bootstrap';
+import React, { useState, useRef } from 'react';
+import '../styles/Contact.css';
 import emailjs from 'emailjs-com';
 
 function Contact(){
-  const formSchema = yup.object().shape({
-    name: yup.string().required('Name is requres'),
-    email: yup.string().email("Invalid email").required("Email is required"),
-    message: yup.string().required("Message is required"),
-  });
+  const [fromName, setFromName] = useState('');
+  const [fromEmail, setFromEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-  const initialValues = {
-    name: '',
-    email: '',
-    message: '',
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = 'service_gikpxrx';
+    const templateId = 'template_2rdg5ci';
+    const userId = '_SXcnxLYPEOWfPaFf';
+
+    emailjs.send(serviceId, templateId, {
+        to_email: 'cherise.foster@outlook.com',
+        message: message,
+        from_name: fromName,
+        from_email: fromEmail,
+      }, userId)
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        setFromName('');
+        setFromEmail('');
+        setMessage('');
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
   };
 
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    emailjs.send('service_gikpxrx', 'template_2rdg5ci', values, 'YOUR_USER_ID')
-      .then((result) => {
-        console.log(result.text);
-        resetForm();
-        setSubmitting(false);
-      }, (error) => {
-        console.log(error.text);
-        setSubmitting(false);
-      });
-    };
-
-    return (
-      <Formik
-        initialValues={initialValues}
-        validationSchema={formSchema}
-        onSubmit={handleSubmit}
-        >
-      {({ handleSubmit }) => (
-        <Form onSubmit={handleSubmit}>
-          <FormGroup>
-            <FormLabel>Name</FormLabel>
-            <Field name="name" as={FormControl} />
-            <ErrorMessage name="name" component="div" className="error-message" />
-          </FormGroup>
-
-          <FormGroup>
-            <FormLabel>Email</FormLabel>
-            <Field name="email" type="email" as={FormControl} />
-            <ErrorMessage name="email" component="div" className="error-message" />
-          </FormGroup>
-
-          <FormGroup>
-            <FormLabel>Message</FormLabel>
-            <Field name="message" as="textarea" className="form-control" />
-            <ErrorMessage name="message" component="div" className="error-message" />
-          </FormGroup>
-
-          <Button variant="primary" type="submit">
-            Send Message
-          </Button>
-        </Form>
-      )}
-    </Formik>
+  return (
+    <section id="contact" className="contact">
+      <div className="container">
+        <div className="section-title">
+          <h2>Contact Me</h2>
+        </div>
+        <div className="php-email-form mt-4">
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label>Your Name:</label>
+              <input
+                type="text"
+                className="form-control"
+                value={fromName}
+                onChange={(e) => setFromName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Your Email:</label>
+              <input
+                type="email"
+                className="form-control"
+                value={fromEmail}
+                onChange={(e) => setFromEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Message:</label>
+              <textarea
+                className="form-control"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              />
+            </div>
+            <div className="text-center">
+              <button type="submit" className="btn btn-primary">Send Email</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   );
 }
+
 
 export default Contact;
