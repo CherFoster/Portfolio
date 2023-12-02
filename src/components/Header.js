@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 import '../styles/Header.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import Navbar from "./NavBar";
+import Navbar from "./Navbar";
 import Contact from "./Contact";
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
 
   const [showContact, setShowContact] = useState(false);
+  const navigate = useNavigate();
 
   const onContactClick = () => {
     setShowContact(!showContact); // Toggle visibility of Contact form
+  };
+
+  const hideContactForm = () => {
+    setShowContact(false);
+    navigate('/'); // Navigate back to the home page
   };
 
   return (
@@ -22,7 +29,7 @@ function Header() {
           I bring innovative solutions to complex problems, blending front-end flair with robust backend functionalities. My focus is on creating user-friendly and efficient applications, always prioritizing a seamless user experience. My journey in tech is driven by a love for learning and exploring new technologies, constantly enhancing both the user experience and my own skill set.
           </p>
 
-        <Navbar onContactClick={onContactClick} />
+        <Navbar onContactClick={onContactClick} hideContactForm={hideContactForm} />
         {showContact && <Contact />}
 
         <p className="my-3">Check out my LinkedIn profile, GitHub, and blog:</p>

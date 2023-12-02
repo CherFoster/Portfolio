@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainPage from './MainPage';
 import Contact from './Contact';
 import Home from './Home';
 import { Element } from 'react-scroll';
@@ -14,12 +13,17 @@ function App(){
     setShowContact(!showContact);
   };
 
+  const hideContactForm = () => {
+    setShowContact(false);
+  };
+
+
     return (
           <Router>
             <Routes>
               <Route path="/" element={
                 <>
-                  <Home onContactClick={handleContactClick} />
+                  <Home onContactClick={handleContactClick} hideContactForm={hideContactForm} />
                   {showContact && (
                     <Element name="contact-section">
                       <Contact />

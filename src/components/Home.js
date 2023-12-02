@@ -2,7 +2,8 @@ import React from "react";
 import Header from "./Header";
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-function Home({ onContactClick }) {
+function Home({ onContactClick  }) {
+    
   return (
     <>
         <Container>

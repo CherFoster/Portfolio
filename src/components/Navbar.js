@@ -1,22 +1,34 @@
 import React, { useState } from 'react';
 import '../styles/NavBar.css';
 import { Link } from 'react-scroll';
-import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
-function Navbar({ onContactClick }) {
+function Navbar({ onContactClick, hideContactForm }) {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
 
   function toggleMobileNav(){
     setMobileNavVisible(!mobileNavVisible);
   };
 
+  function hideContact(){
+    hideContactForm();
+    toggleMobileNav();
+  }
+
   return (
     <nav id="navbar" className={`navbar ${mobileNavVisible ? 'navbar-mobile' : ''}`}>
       <ul>
-        <li><Link to="home-section" spy={true} smooth={true} offset={-70} duration={500} onClick={toggleMobileNav}>Home</Link></li>
-
-        {/* <li><Link to="about-section" spy={true} smooth={true} offset={-70} duration={500} onClick={toggleMobileNav}>About</Link></li> */}
+        <li>
+          <Link
+          to="home-section" 
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          onClick={() => {hideContact()}}>
+            Home
+          </Link>
+        </li>
 
         <li><ScrollLink to="about-section" spy={true} smooth={true} offset={-70} duration={500} onClick={toggleMobileNav}>About</ScrollLink></li>
 
