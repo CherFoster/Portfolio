@@ -144,3 +144,11 @@
     font-size: 16px;
     position: relative;
   }
+
+  .navbar-top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+  }
