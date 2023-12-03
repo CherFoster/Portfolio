@@ -31,7 +31,7 @@ function Navbar({ onContactClick, hideContactForm }) {
           </Link>
         </li>
 
-        <li>
+        {/* <li>
           <Link
            to="about-section"
            spy={true}
@@ -41,7 +41,7 @@ function Navbar({ onContactClick, hideContactForm }) {
            onClick={toggleMobileNav}>
             About
             </Link>
-          </li>
+          </li> */}
 
         <li>
           <Resume />
