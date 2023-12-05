@@ -10,23 +10,53 @@ function Projects(){
               <h2 className="text-center">Projects</h2>
             </div>
     
-            <div className="row portfolio-container">
-              {/* Example Portfolio Item */}
-              <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div className="row portfolio-container my-3">
+              <div className="col-lg-6 col-md-6 portfolio-item">
                 <div className="portfolio-wrap">
                   <img src="https://i.postimg.cc/MKDC5gVX/ARC.jpg" className="img-fluid" alt="" />
                   <div className="portfolio-info">
                     <h4>Advanced Rescue Communications</h4>
-                    {/* <p>App</p> */}
-                    <div className="portfolio-links">
-                      <a href="assets/img/portfolio/portfolio-1.jpg" className="portfolio-lightbox" title="App 1"><i className="bx bx-plus"></i></a>
-                      <a href="portfolio-details.html" className="portfolio-details-lightbox" title="Portfolio Details"><i className="bx bx-link"></i></a>
-                    </div>
+                    <p>A web application designed to assist in the communication of rescue teams during emergencies.</p>
                   </div>
                 </div>
+                <p className="my-4">JavaScript, React, Python, Flask, HTML, CSS  </p>
               </div>
-    
-              {/* Repeat for other portfolio items... */}
+
+              <div className="col-lg-6 col-md-6 portfolio-item">
+                <div className="portfolio-wrap">
+                  <img src="https://i.postimg.cc/MKDC5gVX/ARC.jpg" className="img-fluid" alt="" />
+                  <div className="portfolio-info">
+                    <h4>Advanced Rescue Communications</h4>
+                    <p>A web application designed to assist in the communication of rescue teams during emergencies.</p>
+                  </div>
+                </div>
+                <p className="my-4">dfsdf</p>
+              </div>
+
+              <div className="col-lg-6 col-md-6 portfolio-item">
+                <div className="portfolio-wrap">
+                  <img src="https://i.postimg.cc/MKDC5gVX/ARC.jpg" className="img-fluid" alt="" />
+                  <div className="portfolio-info">
+                    <h4>Advanced Rescue Communications</h4>
+                    <p>A web application designed to assist in the communication of rescue teams during emergencies.</p>
+                  </div>
+                </div>
+                <p className="my-4">dfsdf</p>
+              </div>
+
+              <div className="col-lg-6 col-md-6 portfolio-item">
+                <div className="portfolio-wrap">
+                  <img src="https://i.postimg.cc/MKDC5gVX/ARC.jpg" className="img-fluid" alt="" />
+                  <div className="portfolio-info">
+                    <h4>Advanced Rescue Communications</h4>
+                    <p>A web application designed to assist in the communication of rescue teams during emergencies.</p>
+                  </div>
+                </div>
+                <p className="my-4">dfsdf</p>
+              </div>
+
+             
+  
             </div>
     
           </div>
