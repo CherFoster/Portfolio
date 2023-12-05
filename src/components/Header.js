@@ -3,11 +3,13 @@ import '../styles/Header.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Navbar from "./Navbar";
 import Contact from "./Contact";
+import Projects from "./Projects";
 import { useNavigate } from 'react-router-dom';
 
 function Header() {
 
   const [showContact, setShowContact] = useState(false);
+  const [showProject, setShowProject] = useState(false);
   const navigate = useNavigate();
 
   const onContactClick = () => {
@@ -19,6 +21,10 @@ function Header() {
     navigate('/'); // Navigate back to the home page
   };
 
+  const onProjectClick = () => {
+    setShowProject(!showProject);
+  }
+
   return (
     <header id="header">
       <div className="container">
@@ -29,8 +35,12 @@ function Header() {
           I bring innovative solutions to complex problems, blending front-end flair with robust backend functionalities. My focus is on creating user-friendly and efficient applications, always prioritizing a seamless user experience. My journey in tech is driven by a love for learning and exploring new technologies, constantly enhancing both the user experience and my own skill set.
           </p>
 
-        <Navbar onContactClick={onContactClick} hideContactForm={hideContactForm} />
+        <Navbar onContactClick={onContactClick} onProjectClick={onProjectClick} hideContactForm={hideContactForm} />
         {showContact && <Contact />}
+        {showProject && <Projects />}
+
+
+        
 
         <p className="my-3">Check out my LinkedIn profile, GitHub, and blog:</p>
   

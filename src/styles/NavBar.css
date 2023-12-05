@@ -54,7 +54,7 @@
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: #18d26e;
+    background-color: rgb(241, 137, 241);
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -145,10 +145,12 @@
     position: relative;
   }
 
-  .navbar-top-right {
+  /* .navbar-top-right {
     position: fixed;
     top: 0;
     right: 0;
     left: auto;
     bottom: auto;
-  }
+  } */
+
+  

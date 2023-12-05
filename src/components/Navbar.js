@@ -3,17 +3,17 @@ import '../styles/NavBar.css';
 import { Link } from 'react-scroll';
 import Resume from './Resume';
 
-function Navbar({ onContactClick, hideContactForm }) {
+function Navbar({ onContactClick, hideContactForm, onProjectClick }) {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
 
   function toggleMobileNav(){
     setMobileNavVisible(!mobileNavVisible);
   };
 
-  function hideContact(){
-    hideContactForm();
-    toggleMobileNav();
-  };
+  // function hideContact(){
+  //   hideContactForm();
+  //   toggleMobileNav();
+  // };
 
   return (
     <nav id="navbar" className={`navbar ${mobileNavVisible ? 'navbar-mobile' : ''}`}
@@ -21,33 +21,12 @@ function Navbar({ onContactClick, hideContactForm }) {
       <ul>
         <li>
           <Link
-          to="home-section" 
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          onClick={() => {hideContact()}}>
+          to="/">
             Home
           </Link>
         </li>
 
         {/* <li>
-          <Link
-           to="about-section"
-           spy={true}
-           smooth={true} 
-           offset={-70} 
-           duration={500} 
-           onClick={toggleMobileNav}>
-            About
-            </Link>
-          </li> */}
-
-        <li>
-          <Resume />
-          </li>
-
-        <li>
           <Link 
           to="portfolio-section" 
           spy={true} 
@@ -55,13 +34,21 @@ function Navbar({ onContactClick, hideContactForm }) {
           offset={-70} 
           duration={500} 
           onClick={toggleMobileNav}>
-            Portfolio
+            Projects
             </Link>
-            </li>
+            </li> */}
 
-        {/* <li><Link to="contact-section" spy={true} smooth={true} offset={-70} duration={500} onClick={toggleMobileNav}>Contact</Link></li> */}
+          <li>
+            <a onClick={() => { toggleMobileNav(); onProjectClick(); }}>Projects</a>
+          </li>
 
-        <li><a onClick={() => { toggleMobileNav(); onContactClick(); }}>Contact</a></li>
+        <li>
+          <a onClick={() => { toggleMobileNav(); onContactClick(); }}>Contact</a>
+          </li>
+
+        <li>
+          <Resume />
+          </li>
   
       </ul>
       <i className={`bi ${mobileNavVisible ? 'bi-x' : 'bi-list'} mobile-nav-toggle`} onClick={toggleMobileNav}></i>
