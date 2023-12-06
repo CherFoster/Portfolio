@@ -3,17 +3,18 @@ import '../styles/NavBar.css';
 import { Link } from 'react-scroll';
 import Resume from './Resume';
 
-function Navbar({ onContactClick, hideContactForm, onProjectClick }) {
+function Navbar({ onContactClick, onProjectClick }) {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
 
-  function toggleMobileNav(){
+  function toggleMobileNav() {
     setMobileNavVisible(!mobileNavVisible);
-  };
-
-  // function hideContact(){
-  //   hideContactForm();
-  //   toggleMobileNav();
-  // };
+    
+    if (mobileNavVisible) {
+      document.body.classList.remove('overflow-hidden');
+    } else {   
+      document.body.classList.add('overflow-hidden');
+    }
+  }
 
   return (
     <nav id="navbar" className={`navbar ${mobileNavVisible ? 'navbar-mobile' : ''}`}
@@ -25,18 +26,6 @@ function Navbar({ onContactClick, hideContactForm, onProjectClick }) {
             Home
           </Link>
         </li>
-
-        {/* <li>
-          <Link 
-          to="portfolio-section" 
-          spy={true} 
-          smooth={true} 
-          offset={-70} 
-          duration={500} 
-          onClick={toggleMobileNav}>
-            Projects
-            </Link>
-            </li> */}
 
           <li>
             <a onClick={() => { toggleMobileNav(); onProjectClick(); }}>Projects</a>

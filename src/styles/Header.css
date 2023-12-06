@@ -36,10 +36,10 @@
     padding-bottom: 6px;
   }
   
-  #header img {
+  /* #header img {
     padding: 0;
     margin: 0;
-  }
+  } */
   
   #header .social-links {
     margin-top: 40px;
@@ -86,6 +86,7 @@
   }
   
   /* Header Top */
+
   #header.header-top {
     height: 80px;
     position: fixed;
@@ -134,4 +135,27 @@
   color: white;
   padding-top: 20px;
   font-size: 15px;
+}
+
+.overlay {
+    position: fixed; /* Fixed position to cover the whole screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    z-index: 998; 
+    display: flex; /* Flexbox to center the content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Optional: Add shadow for depth */
+}
+
+/* Additional styling for the content inside the overlay */
+.overlay-content {
+    margin: 15px; /* Margin around the content */
+    padding: 20px; /* Padding inside the content */
+    background: white; /* Background for the content */
+    border-radius: 5px; /* Optional: Rounded corners for the content box */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow for the content box */
 }

@@ -8,6 +8,7 @@
     padding: 0;
     margin-top: 35px;
     color: white;
+    z-index: 100;
   }
   
   .navbar ul {
@@ -16,6 +17,9 @@
     display: flex;
     list-style: none;
     align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
   
   .navbar li {
@@ -67,12 +71,12 @@
     width: 25px;
   }
   
-  .navbar a:hover,
+  /* .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
     color: #fff;
-  }
+  } */
   
   /**
   * Mobile Navigation 
@@ -106,7 +110,6 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
     transition: 0.3s;
     z-index: 999;
     margin-top: 0;
@@ -118,7 +121,7 @@
     right: 15px;
   }
   
-  .navbar-mobile ul {
+  /* .navbar-mobile ul {
     display: block;
     position: absolute;
     top: 55px;
@@ -128,8 +131,8 @@
     padding: 10px 0;
     overflow-y: auto;
     transition: 0.3s;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-  }
+    z-index: 999;
+  } */
   
   .navbar-mobile li {
     padding: 12px 20px;
@@ -144,13 +147,5 @@
     font-size: 16px;
     position: relative;
   }
-
-  /* .navbar-top-right {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: auto;
-    bottom: auto;
-  } */
 
   

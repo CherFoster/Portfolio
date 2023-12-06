@@ -1,38 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Contact from "./Contact";
 import Projects from "./Projects";
-import Navbar from "./Navbar"; // Assuming Navbar is a separate component
-import { useNavigate } from 'react-router-dom';
+import Navbar from "./Navbar"; 
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../styles/Header.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Home() {
-  const [showContact, setShowContact] = useState(false);
-  const [showProject, setShowProject] = useState(false);
-  const navigate = useNavigate();
+
+const [overlayContent, setOverlayContent] = useState(null);
+const [scrollPos, setScrollPos] = useState(0);
 
   const onContactClick = () => {
-    setShowContact(!showContact); // Toggle visibility of Contact form
-    setShowProject(false); // Ensure that Projects is not shown
+    setOverlayContent('contact');
   };
 
   const onProjectClick = () => {
-    setShowProject(!showProject);
-    setShowContact(false); // Ensure that Contact is not shown
+    setOverlayContent('projects');
   };
 
-  const hideContactForm = () => {
-    setShowContact(false);
-    navigate('/'); // Navigate back to the home page
+  const onHideOverlay = () => {
+    setOverlayContent(null); // Function to hide the overlay
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPos(window.scrollY);
+    }
+  
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
   return (
     <>
       <Container>
         <Row className="align-items-center">
           <Col sm={7}>
-            <div id="header">
+            <div id="header"
+            className={scrollPos > 100 ? 'header-top' : ''}>
               <div className="container">
                 <h1>Cherise Foster</h1>
                 <h2>I'm a full-stack <span>software engineer</span> from Denver, Colorado</h2>
@@ -40,9 +48,7 @@ function Home() {
                   I bring innovative solutions to complex problems, blending front-end flair with robust backend functionalities. My focus is on creating user-friendly and efficient applications, always prioritizing a seamless user experience. My journey in tech is driven by a love for learning and exploring new technologies, constantly enhancing both the user experience and my own skill set.
                 </p>
 
-                <Navbar onContactClick={onContactClick} onProjectClick={onProjectClick} hideContactForm={hideContactForm} />
-                {showContact && <Contact />}
-                {showProject && <Projects />}
+                <Navbar onContactClick={onContactClick} onProjectClick={onProjectClick} />
 
                 <p className="my-3">Check out my LinkedIn profile, GitHub, and blog:</p>
         
@@ -70,6 +76,16 @@ function Home() {
           </Col>
         </Row>
       </Container>
+      {overlayContent === 'contact' && (
+        <div className="overlay">
+          <Contact onHideOverlay={onHideOverlay} />
+        </div>
+      )}
+      {overlayContent === 'projects' && (
+        <div className="overlay">
+          <Projects onHideOverlay={onHideOverlay} />
+        </div>
+      )}
     </>
   );
 }

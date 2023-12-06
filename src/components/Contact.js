@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/Contact.css';
 import emailjs from 'emailjs-com';
 
-function Contact(){
+function Contact({ onHideOverlay }){
   const [fromName, setFromName] = useState('');
   const [fromEmail, setFromEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -29,6 +29,7 @@ function Contact(){
       .catch((error) => {
         console.error('Error sending email:', error);
       });
+      onHideOverlay();
   };
 
   return (

@@ -11,7 +11,7 @@ function Projects(){
             </div>
     
             <div className="row portfolio-container my-3">
-              <div className="col-lg-6 col-md-6 portfolio-item">
+              <div className="col-lg-4 col-md-4 portfolio-item">
                 <div className="portfolio-wrap">
                   <img src="https://i.postimg.cc/MKDC5gVX/ARC.jpg" className="img-fluid" alt="" />
                   <div className="portfolio-info">
@@ -22,7 +22,7 @@ function Projects(){
                 <p className="my-4">JavaScript, React, Python, Flask, HTML, CSS  </p>
               </div>
 
-              <div className="col-lg-6 col-md-6 portfolio-item">
+              <div className="col-lg-4 col-md-4 portfolio-item">
                 <div className="portfolio-wrap">
                   <img src="https://i.postimg.cc/MKDC5gVX/ARC.jpg" className="img-fluid" alt="" />
                   <div className="portfolio-info">
@@ -33,7 +33,7 @@ function Projects(){
                 <p className="my-4">dfsdf</p>
               </div>
 
-              <div className="col-lg-6 col-md-6 portfolio-item">
+              <div className="col-lg-4 col-md-4 portfolio-item">
                 <div className="portfolio-wrap">
                   <img src="https://i.postimg.cc/MKDC5gVX/ARC.jpg" className="img-fluid" alt="" />
                   <div className="portfolio-info">
@@ -44,7 +44,7 @@ function Projects(){
                 <p className="my-4">dfsdf</p>
               </div>
 
-              <div className="col-lg-6 col-md-6 portfolio-item">
+              <div className="col-lg-4 col-md-4 portfolio-item">
                 <div className="portfolio-wrap">
                   <img src="https://i.postimg.cc/MKDC5gVX/ARC.jpg" className="img-fluid" alt="" />
                   <div className="portfolio-info">
@@ -54,6 +54,8 @@ function Projects(){
                 </div>
                 <p className="my-4">dfsdf</p>
               </div>
+              
+              
 
              
   

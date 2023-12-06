@@ -42,7 +42,7 @@
     transition: 0.3s;
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    /* z-index: 1; */
     background: rgba(0, 0, 0, 0.6);
   }
   
@@ -224,13 +224,13 @@
     background-color: #18d26e;
   } */
 
-  .portfolio {
-    position: absolute; /* or absolute */
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    z-index: 1000; /* Higher than other elements */
-    width: 60%;
+.portfolio {
+  position: absolute; /* or absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Higher than other elements */
+  width: 60%;
 }
 
 p.my-4 {
