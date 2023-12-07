@@ -73,6 +73,9 @@ function Contact({ onHideOverlay }){
               <button type="submit" className="btn btn-primary">Send Email</button>
             </div>
           </form>
+          <button onClick={onHideOverlay} className="btn btn-secondary">
+          Back
+        </button>
         </div>
       </div>
     </section>

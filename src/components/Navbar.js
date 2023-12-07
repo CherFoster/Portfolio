@@ -3,18 +3,18 @@ import '../styles/NavBar.css';
 import { Link } from 'react-scroll';
 import Resume from './Resume';
 
-function Navbar({ onContactClick, onProjectClick }) {
-  const [mobileNavVisible, setMobileNavVisible] = useState(false);
+function Navbar({ onContactClick, onProjectClick, mobileNavVisible, toggleMobileNav }) {
+  // const [mobileNavVisible, setMobileNavVisible] = useState(false);
 
-  function toggleMobileNav() {
-    setMobileNavVisible(!mobileNavVisible);
+  // function toggleMobileNav() {
+  //   setMobileNavVisible(!mobileNavVisible);
     
-    if (mobileNavVisible) {
-      document.body.classList.remove('overflow-hidden');
-    } else {   
-      document.body.classList.add('overflow-hidden');
-    }
-  }
+  //   if (mobileNavVisible) {
+  //     document.body.classList.remove('overflow-hidden');
+  //   } else {   
+  //     document.body.classList.add('overflow-hidden');
+  //   }
+  // }
 
   return (
     <nav id="navbar" className={`navbar ${mobileNavVisible ? 'navbar-mobile' : ''}`}

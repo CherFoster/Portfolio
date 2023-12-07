@@ -8,32 +8,44 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Home() {
 
-const [overlayContent, setOverlayContent] = useState(null);
-const [scrollPos, setScrollPos] = useState(0);
+    const [overlayContent, setOverlayContent] = useState(null);
+    const [scrollPos, setScrollPos] = useState(0);
 
-  const onContactClick = () => {
-    setOverlayContent('contact');
-  };
+    const onContactClick = () => {
+        if (mobileNavVisible) {
+            toggleMobileNav(); // Close the mobile navigation if it's open
+        }
+        setOverlayContent('contact');
+    };
 
-  const onProjectClick = () => {
-    setOverlayContent('projects');
-  };
+    const onProjectClick = () => {
+        if (mobileNavVisible) {
+            toggleMobileNav(); // Close the mobile navigation if it's open
+        }
+        setOverlayContent('projects');
+    };
 
-  const onHideOverlay = () => {
-    setOverlayContent(null); // Function to hide the overlay
-  };
+    const onHideOverlay = () => {
+        setOverlayContent(null);
+        if (mobileNavVisible) {
+            toggleMobileNav(); // This will reset the mobile navbar
+        }
+    };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPos(window.scrollY);
-    }
-  
-    window.addEventListener('scroll', handleScroll);
+    const [mobileNavVisible, setMobileNavVisible] = useState(false);
+
+  function toggleMobileNav() {
+    setMobileNavVisible(!mobileNavVisible);
     
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    if (mobileNavVisible) {
+      document.body.classList.remove('overflow-hidden');
+    } else {   
+      document.body.classList.add('overflow-hidden');
     }
-  }, []);
+  }
+
+  
+
   return (
     <>
       <Container>
@@ -48,8 +60,12 @@ const [scrollPos, setScrollPos] = useState(0);
                   I bring innovative solutions to complex problems, blending front-end flair with robust backend functionalities. My focus is on creating user-friendly and efficient applications, always prioritizing a seamless user experience. My journey in tech is driven by a love for learning and exploring new technologies, constantly enhancing both the user experience and my own skill set.
                 </p>
 
-                <Navbar onContactClick={onContactClick} onProjectClick={onProjectClick} />
-
+                <Navbar 
+                    onContactClick={onContactClick} 
+                    onProjectClick={onProjectClick} 
+                    mobileNavVisible={mobileNavVisible} 
+                    toggleMobileNav={toggleMobileNav} 
+                />
                 <p className="my-3">Check out my LinkedIn profile, GitHub, and blog:</p>
         
                 <div className="social-links">
