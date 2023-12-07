@@ -1,9 +1,12 @@
 import React from "react";
 import '../styles/Projects.css'
 
-function Projects(){
+function Projects({ onHideOverlay }){
     return (
         <section id="portfolio" className="portfolio">
+            <button onClick={onHideOverlay} className="btn btn-secondary">
+          Back
+        </button>
           <div className="container">
     
             <div className="section-title">
@@ -54,10 +57,6 @@ function Projects(){
                 </div>
                 <p className="my-4">dfsdf</p>
               </div>
-              
-              
-
-             
   
             </div>
     
