@@ -10,7 +10,7 @@ function Projects({ onHideOverlay }){
           <div className="container">
     
             <div className="section-title">
-              <h2 className="text-center">Projects</h2>
+              <h2 className="text-center text-white">Projects</h2>
             </div>
     
             <div className="row portfolio-container my-3">
@@ -22,7 +22,7 @@ function Projects({ onHideOverlay }){
                     <p>A web application designed to assist in the communication of rescue teams during emergencies.</p>
                   </div>
                 </div>
-                <p className="my-4">JavaScript, React, Python, Flask, HTML, CSS  </p>
+                <p className="my-4">JavaScript, React, Python, Flask, Redux, Bootstrap, Formik, Bcrypt, HTML, CSS</p>
               </div>
 
               <div className="col-lg-4 col-md-4 portfolio-item">
@@ -33,21 +33,21 @@ function Projects({ onHideOverlay }){
                     <p>A user-centric platform for discovering, managing, and reviewing books</p>
                   </div>
                 </div>
-                <p className="my-4">dfsdf</p>
+                <p className="my-4">JavaScript, React, Python, Flask, Bootstrap, Formik, Bcrypt, HTML, CSS</p>
               </div>
 
               <div className="col-lg-4 col-md-4 portfolio-item">
                 <div className="portfolio-wrap">
                   <img src="https://i.postimg.cc/nz66X6Sf/airbook.png" className="img-fluid" alt="" />
                   <div className="portfolio-info">
-                    <h4>Advanced Rescue Communications</h4>
-                    <p>A web application designed to assist in the communication of rescue teams during emergencies.</p>
+                    <h4>AirBook</h4>
+                    <p>A command-line application for viewing and managing flight, passenger, and reservation details, including creating and deleting reservations</p>
                   </div>
                 </div>
-                <p className="my-4">dfsdf</p>
+                <p className="my-4">Python, SQL, SQLAlchemy, Alembic</p>
               </div>
 
-              <div className="col-lg-4 col-md-4 portfolio-item">
+              {/* <div className="col-lg-4 col-md-4 portfolio-item">
                 <div className="portfolio-wrap">
                   <img src="https://i.postimg.cc/MKDC5gVX/ARC.jpg" className="img-fluid" alt="" />
                   <div className="portfolio-info">
@@ -56,7 +56,7 @@ function Projects({ onHideOverlay }){
                   </div>
                 </div>
                 <p className="my-4">dfsdf</p>
-              </div>
+              </div> */}
   
             </div>
     
