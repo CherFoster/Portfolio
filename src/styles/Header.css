@@ -85,6 +85,11 @@
       z-index: 999;
     }
   }
+
+  h4 {
+    color: white;
+    font-size: 20px;
+  }
   
   /* Header Top */
 

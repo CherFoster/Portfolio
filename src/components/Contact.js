@@ -6,6 +6,15 @@ function Contact({ onHideOverlay }){
   const [fromName, setFromName] = useState('');
   const [fromEmail, setFromEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const resetForm = () => {
+    setFromName('');
+    setFromEmail('');
+    setMessage('');
+    setSubmitStatus('');
+
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,14 +31,15 @@ function Contact({ onHideOverlay }){
       }, userId)
       .then((response) => {
         console.log('Email sent successfully!', response);
-        setFromName('');
-        setFromEmail('');
-        setMessage('');
-      })
+        setSubmitStatus('Message sent!');
+        setTimeout(() => {
+        resetForm();
+      }, 2000); 
+    })
       .catch((error) => {
         console.error('Error sending email:', error);
+        setSubmitStatus('Failed to send message. Please try again.');
       });
-      onHideOverlay();
   };
 
   return (
@@ -38,6 +48,7 @@ function Contact({ onHideOverlay }){
         <div className="section-title">
           <h2 className='contact-heading'>Contact Me</h2>
         </div>
+        {submitStatus && <div className="submit-status">{submitStatus} <i class="bi bi-envelope-check-fill"></i></div>}
         <div className="php-email-form mt-4">
           <form onSubmit={handleSubmit}>
             <div className="form-group">

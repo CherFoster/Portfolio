@@ -4,7 +4,7 @@ import Projects from "./Projects";
 import Navbar from "./Navbar"; 
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../styles/Header.css'
-import 'bootstrap-icons/font/bootstrap-icons.css';
+// import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Home() {
 
@@ -55,7 +55,9 @@ function Home() {
             className={scrollPos > 100 ? 'header-top' : ''}>
               <div className="container">
                 <h1>Cherise Foster</h1>
-                <h2>I'm a full-stack <span>software engineer</span> from Denver, Colorado</h2>
+                <h2>I'm a Full-Stack <span>Software Engineer</span></h2>
+                <br />
+                <h4><i class="bi bi-geo-alt-fill"></i> Denver, Colorado</h4>
                 <p className="my-3 text-white">
                     I bring innovative solutions to complex problems, blending front-end flair with robust backend functionalities. My focus on user-friendly, efficient applications is enhanced by my flight attendant background, where I honed skills in public interaction and teamwork. My journey in tech is driven by a love for learning and exploring new technologies, constantly enhancing both the user experience and my own skill.
                 </p>

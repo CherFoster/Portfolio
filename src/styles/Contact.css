@@ -118,6 +118,11 @@
   .contact .php-email-form button[type=submit]:hover {
     background: #15bb62;
   }
+  .submit-status{
+    color: green;
+    text-align: center;
+    font-size: 25px;
+  }
   
   @keyframes animate-loading {
     0% {
