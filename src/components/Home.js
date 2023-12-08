@@ -57,7 +57,7 @@ function Home() {
                 <h1>Cherise Foster</h1>
                 <h2>I'm a full-stack <span>software engineer</span> from Denver, Colorado</h2>
                 <p className="my-3 text-white">
-                  I bring innovative solutions to complex problems, blending front-end flair with robust backend functionalities. My focus is on creating user-friendly and efficient applications, always prioritizing a seamless user experience. My journey in tech is driven by a love for learning and exploring new technologies, constantly enhancing both the user experience and my own skill set.
+                    I bring innovative solutions to complex problems, blending front-end flair with robust backend functionalities. My focus on user-friendly, efficient applications is enhanced by my flight attendant background, where I honed skills in public interaction and teamwork. My journey in tech is driven by a love for learning and exploring new technologies, constantly enhancing both the user experience and my own skill.
                 </p>
 
                 <Navbar 
