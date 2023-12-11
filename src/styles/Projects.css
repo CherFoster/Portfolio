@@ -152,77 +152,6 @@
     right: 15px;
   } */
   
-  /*--------------------------------------------------------------
-  # Portfolio Details
-  --------------------------------------------------------------*/
-  /* .portfolio-details {
-    padding-top: 40px;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    overflow-y: auto;
-  }
-  
-  .portfolio-details .container {
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-  
-  .portfolio-details .portfolio-title {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  .portfolio-details .portfolio-info {
-    padding-top: 45px;
-  }
-  
-  .portfolio-details .portfolio-info h3 {
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 20px;
-  }
-  
-  .portfolio-details .portfolio-info ul {
-    list-style: none;
-    padding: 0;
-    font-size: 15px;
-  }
-  
-  .portfolio-details .portfolio-info ul li+li {
-    margin-top: 10px;
-  }
-  
-  .portfolio-details .portfolio-info p {
-    font-size: 15px;
-    padding: 15px 0 0 0;
-  }
-  
-  @media (max-width: 992px) {
-    .portfolio-details .portfolio-info {
-      padding-top: 20px;
-    }
-  }
-  
-  .portfolio-details .swiper-pagination {
-    margin-top: 20px;
-    position: relative;
-  }
-  
-  .portfolio-details .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  
-  .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #18d26e;
-  } */
 
 .portfolio {
   position: absolute; /* or absolute */
@@ -231,10 +160,133 @@
   transform: translate(-50%, -50%);
   z-index: 1000; /* Higher than other elements */
   width: 60%;
+  margin-top: -100px;
 }
 
 p.my-4 {
   color: white;
   text-align: center;
   font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+/* .portfolio-details {
+  padding-top: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.portfolio-details .container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.portfolio-details .portfolio-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-info {
+  padding-top: 45px;
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-info p {
+  font-size: 15px;
+  padding: 15px 0 0 0;
+}
+
+@media (max-width: 992px) {
+  .portfolio-details .portfolio-info {
+    padding-top: 20px;
+  }
+}
+
+.portfolio-details .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #18d26e;
+} */
+
+.portfolio-details {
+  color: white;
+}
+
+/* If you have specific classes inside .portfolio-details and want to change their text color */
+.portfolio-details .portfolio-info,
+.portfolio-details .portfolio-title {
+  color: white;
+}
+
+.details-button {
+  margin-top: 100px;
+}
+
+.project-links a {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.project-links a:hover {
+  background: rgb(241, 137, 241);
+}
+
+.project-links {
+  margin-top: 20px;
+  display: flex;
+}
+
+.project-image {
+  max-width: 50%; /* Adjusts the size of the image */
+  float: right;   /* Aligns the image to the right */
+  margin-left: 20px; /* Adds some space between the text and the image */
+}
+
+/* Clearfix for the floated image */
+.portfolio-info::after {
+  content: "";
+  display: table;
+  clear: both;
 }
