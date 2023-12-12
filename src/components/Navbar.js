@@ -9,12 +9,6 @@ function Navbar({ onContactClick, onProjectClick, mobileNavVisible, toggleMobile
     <nav id="navbar" className={`navbar ${mobileNavVisible ? 'navbar-mobile' : ''}`}
   >
       <ul>
-        {/* <li>
-          <Link
-          to="/">
-            Home
-          </Link>
-        </li> */}
 
           <li>
             <a onClick={() => { toggleMobileNav(); onProjectClick(); }}>Projects</a>

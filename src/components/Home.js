@@ -4,7 +4,7 @@ import Projects from "./Projects";
 import Navbar from "./Navbar"; 
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../styles/Header.css'
-// import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function Home() {
 

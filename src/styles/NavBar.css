@@ -121,7 +121,7 @@
     right: 15px;
   }
   
-  /* .navbar-mobile ul {
+  .navbar-mobile ul {
     display: block;
     position: absolute;
     top: 55px;
@@ -131,8 +131,8 @@
     padding: 10px 0;
     overflow-y: auto;
     transition: 0.3s;
-    z-index: 999;
-  } */
+    z-index: 1000;
+  }
   
   .navbar-mobile li {
     padding: 12px 20px;
@@ -148,4 +148,10 @@
     position: relative;
   }
 
-  
+.navbar-mobile .mobile-nav-links {
+    display: block; /* Show the links */
+}
+
+.navbar ul.hidden {
+    display: none; /* Hide the links */
+}
