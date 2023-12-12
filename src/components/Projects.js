@@ -21,7 +21,7 @@ function Projects({ onHideOverlay }){
           <div className="container">
             <h3 className="portfolio-title">{selectedProject.icon} {selectedProject.name}</h3>
             <div className="portfolio-info">
-              <img className="project-image" src={selectedProject.image} />
+              <img alt='project-logo' className="project-image" src={selectedProject.image} />
               <p>{selectedProject.summary}</p>
               <p>{selectedProject.description}</p>
               <p>Technologies: {selectedProject.technologies}</p>
