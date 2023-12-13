@@ -164,4 +164,6 @@
     background: white; /* Background for the content */
     border-radius: 5px; /* Optional: Rounded corners for the content box */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow for the content box */
+    overflow-y: auto; /* Allows vertical scrolling within the overlay content */
+    max-height: 90vh;
 }

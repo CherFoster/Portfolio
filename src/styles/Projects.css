@@ -41,7 +41,7 @@
   .portfolio .portfolio-wrap {
     transition: 0.3s;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* z-index: 1; */
     background: rgba(0, 0, 0, 0.6);
   }
@@ -243,12 +243,14 @@ p.my-4 {
 
 .portfolio-details {
   color: white;
+  overflow-y: auto;
 }
 
 /* If you have specific classes inside .portfolio-details and want to change their text color */
 .portfolio-details .portfolio-info,
 .portfolio-details .portfolio-title {
   color: white;
+  overflow-y: auto;
 }
 
 .details-button {
@@ -289,4 +291,22 @@ p.my-4 {
   content: "";
   display: table;
   clear: both;
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    width: 100%;
+    margin-top: 0;
+  }
+  .project-image {
+    max-width: 100%;
+    height: auto;
+    float: none;
+    margin-left: 0;
+  }
+  .portfolio-details .portfolio-info {
+    padding-top: 20px;
+  }
+  
+  /* Add more responsive styles here */
 }
