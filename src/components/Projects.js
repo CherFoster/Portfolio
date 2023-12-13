@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { projectDetails } from "./ProjectDetails";
 import '../styles/Projects.css'
-
 function Projects({ onHideOverlay }){
   const [selectedProject, setSelectedProject] = useState(null);
 

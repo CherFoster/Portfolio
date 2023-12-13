@@ -1,12 +1,9 @@
 import React from 'react';
 import '../styles/NavBar.css';
 import Resume from './Resume';
-
 function Navbar({ onContactClick, onProjectClick, mobileNavVisible, toggleMobileNav }) {
-
   return (
-    <nav id="navbar" className={`navbar ${mobileNavVisible ? 'navbar-mobile' : ''}`}
-  >
+    <nav id="navbar" className={`navbar ${mobileNavVisible ? 'navbar-mobile' : ''}`}>
       <ul>
         <li><a href="#projects" onClick={() => { toggleMobileNav(); onProjectClick(); }}>Projects</a></li>
         <li><a href="#contact" onClick={() => { toggleMobileNav(); onContactClick(); }}>Contact</a></li>

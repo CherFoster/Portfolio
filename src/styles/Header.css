@@ -35,12 +35,7 @@
     border-bottom: 2px solid rgb(241, 137, 241);
     padding-bottom: 6px;
   }
-  
-  /* #header img {
-    padding: 0;
-    margin: 0;
-  } */
-  
+
   #header .social-links {
     margin-top: 20px;
     display: flex;
@@ -136,7 +131,6 @@
     }
   }
 
-  
 .my-3 {
   color: white;
   padding-top: 20px;
@@ -149,28 +143,25 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.96); /* Semi-transparent black background */
+    background: rgba(0, 0, 0, 0.96); 
     z-index: 998; 
-    display: flex; /* Flexbox to center the content */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Optional: Add shadow for depth */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-
-/* Additional styling for the content inside the overlay */
 .overlay-content {
-    margin: 15px; /* Margin around the content */
-    padding: 20px; /* Padding inside the content */
-    background: white; /* Background for the content */
-    border-radius: 5px; /* Optional: Rounded corners for the content box */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Shadow for the content box */
-    overflow-y: auto; /* Allows vertical scrolling within the overlay content */
+    margin: 15px; 
+    padding: 20px; 
+    background: white; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    overflow-y: auto; 
     max-height: 90vh;
 }
 @media (max-width: 768px) {
   .overlay {
-      position: absolute; /* Instead of fixed */
-      /* ... other styles ... */
+      position: absolute; 
   }
 }
 

@@ -8,7 +8,6 @@
     padding: 0;
     margin-top: 35px;
     color: white;
-    /* z-index: 100; */
   }
   
   .navbar ul {
@@ -71,13 +70,6 @@
     visibility: visible;
     width: 25px;
   }
-  
-  /* .navbar a:hover,
-  .navbar .active,
-  .navbar .active:focus,
-  .navbar li:hover>a {
-    color: #fff;
-  } */
   
   /**
   * Mobile Navigation 
