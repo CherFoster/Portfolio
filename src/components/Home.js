@@ -16,6 +16,7 @@ function Home() {
             toggleMobileNav(); // Close the mobile navigation if it's open
         }
         setOverlayContent('contact');
+        document.body.classList.add('no-scroll');
     };
 
     const onProjectClick = () => {
@@ -23,10 +24,12 @@ function Home() {
             toggleMobileNav(); // Close the mobile navigation if it's open
         }
         setOverlayContent('projects');
+        document.body.classList.add('no-scroll');
     };
 
     const onHideOverlay = () => {
         setOverlayContent(null);
+        document.body.classList.remove('no-scroll');
         if (mobileNavVisible) {
             toggleMobileNav(); // This will reset the mobile navbar
         }

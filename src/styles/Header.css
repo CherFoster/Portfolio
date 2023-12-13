@@ -167,3 +167,10 @@
     overflow-y: auto; /* Allows vertical scrolling within the overlay content */
     max-height: 90vh;
 }
+@media (max-width: 768px) {
+  .overlay {
+      position: absolute; /* Instead of fixed */
+      /* ... other styles ... */
+  }
+}
+
