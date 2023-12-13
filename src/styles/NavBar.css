@@ -133,6 +133,7 @@
     overflow-y: auto;
     transition: 0.3s;
     z-index: 1000;
+    background: rgba(0, 0, 0, 0.96);
   }
   
   .navbar-mobile li {
